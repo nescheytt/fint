@@ -1,46 +1,65 @@
-import React from 'react';
-import { FormControl, FormLabel, HStack, InputGroup, InputRightElement, SimpleGrid, Stack, Text } from '@chakra-ui/react';
-import { Formik, Form, Field } from 'formik';
-import { HelpCircle, Info } from 'lucide-react';
-import SelectTheme from '../../../../ui/Select';
-import InputTheme from '../../../../ui/Input';
+import * as React from "react"
+import {
+  FormControl,
+  FormLabel,
+  HStack,
+  InputGroup,
+  InputRightElement,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/react"
+import { Formik, Form, Field } from "formik"
+import { HelpCircle, Info } from "lucide-react"
+import SelectTheme from "../../../../ui/Select"
+import InputTheme from "../../../../ui/Input"
 
 const optionsFrecuency = [
-  { value: 'daily', label: 'Diaria' },
-  { value: 'monthly', label: 'Mensual' },
-  { value: 'yearly', label: 'Anual' }
-];
+  { value: "daily", label: "Diaria" },
+  { value: "monthly", label: "Mensual" },
+  { value: "yearly", label: "Anual" },
+]
 
-interface Props {
-  initialRef: React.MutableRefObject<null>;
-};
+interface FormContentProps {
+  initialRef: React.MutableRefObject<null>
+}
 
-const FormContent: React.FC<Props> = ({ initialRef }) => {
+export default function FormContent({ initialRef }: FormContentProps) {
   function handlerSubmit({ values, actions }: any) {
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2))
       actions.setSubmitting(false)
     }, 1000)
-  };
-  
+  }
+
   return (
-    <Formik initialValues={{}} onSubmit={(values, actions) => handlerSubmit({ values, actions })}>
+    <Formik
+      initialValues={{}}
+      onSubmit={(values, actions) => handlerSubmit({ values, actions })}
+    >
       <Form>
         <Stack spacing={6}>
           <SimpleGrid columns={1} spacing={5}>
-            <Field name='title'>
+            <Field name="title">
               {({ field }: any) => (
                 <FormControl>
                   <FormLabel>Título</FormLabel>
-                  <InputTheme {...field} type="text" ref={initialRef} placeholder="Ej.: Cuota jardín maternal" />
+                  <InputTheme
+                    {...field}
+                    type="text"
+                    ref={initialRef}
+                    placeholder="Ej.: Cuota jardín maternal"
+                  />
                 </FormControl>
               )}
             </Field>
 
-            <Field name='initdate'>
+            <Field name="initdate">
               {({ field }: any) => (
                 <FormControl>
-                  <FormLabel>Fecha de inicio del ciclo de facturación</FormLabel>
+                  <FormLabel>
+                    Fecha de inicio del ciclo de facturación
+                  </FormLabel>
                   <InputTheme {...field} type="date" />
                 </FormControl>
               )}
@@ -48,28 +67,34 @@ const FormContent: React.FC<Props> = ({ initialRef }) => {
           </SimpleGrid>
 
           <SimpleGrid columns={[1, 1, 2]} spacing={5}>
-            <Field name='frecuency'>
+            <Field name="frecuency">
               {({ field }: any) => (
                 <FormControl>
                   <FormLabel>Frecuencia</FormLabel>
-                  <SelectTheme {...field} options={optionsFrecuency} placeholder="Mensual" />
+                  <SelectTheme
+                    {...field}
+                    options={optionsFrecuency}
+                    placeholder="Mensual"
+                  />
                 </FormControl>
               )}
             </Field>
 
-            <Field name='quantity'>
+            <Field name="quantity">
               {({ field }: any) => (
                 <FormControl>
                   <FormLabel>Cantidad de cuotas</FormLabel>
                   <InputGroup>
                     <InputTheme {...field} type="number" pr={10} />
-                    <InputRightElement height="44px" children={<HelpCircle color="gray" size={16} />} />
+                    <InputRightElement height="44px">
+                      <HelpCircle color="gray" size={16} />
+                    </InputRightElement>
                   </InputGroup>
                 </FormControl>
               )}
             </Field>
 
-            <Field name='sendbill'>
+            <Field name="sendbill">
               {({ field }: any) => (
                 <FormControl>
                   <FormLabel>Envio factura</FormLabel>
@@ -79,20 +104,28 @@ const FormContent: React.FC<Props> = ({ initialRef }) => {
                       <Text>de cada mes</Text>
                     </InputRightElement>
                   </InputGroup>
-                  <Text color="grayIron.600" mt={1}>Puedes elegir el día del mes en que se cobrará la suscripción.</Text>
+                  <Text color="grayIron.600" mt={1}>
+                    Puedes elegir el día del mes en que se cobrará la
+                    suscripción.
+                  </Text>
                 </FormControl>
               )}
             </Field>
 
-            <Field name='expirationbill'>
+            <Field name="expirationbill">
               {({ field }: any) => (
                 <FormControl>
                   <FormLabel>Vencimiento de la factura</FormLabel>
                   <InputGroup>
                     <InputTheme {...field} type="number" pr={120} />
-                    <InputRightElement width={120} height="44px" children={<Text>de cada mes</Text>} />
+                    <InputRightElement width={120} height="44px">
+                      <Text>de cada mes</Text>
+                    </InputRightElement>
                   </InputGroup>
-                  <Text color="grayIron.600" mt={1}>Puedes elegir el día del mes en que se cobrará la suscripción.</Text>
+                  <Text color="grayIron.600" mt={1}>
+                    Puedes elegir el día del mes en que se cobrará la
+                    suscripción.
+                  </Text>
                 </FormControl>
               )}
             </Field>
@@ -111,7 +144,9 @@ const FormContent: React.FC<Props> = ({ initialRef }) => {
             <Info color="purple" size={40} height="20px" />
             <Stack alignItems="flex-start">
               <Text lineHeight="20px" color="fint.800">
-                Esta factura se creará y enviará <b>todos los meses</b> el <b>día 1 y vencerá el día 15</b>, a partir del <b>1 Mar 2023</b> y la última factura se enviará el <b>1 de Dic 2023</b>
+                Esta factura se creará y enviará <b>todos los meses</b> el{" "}
+                <b>día 1 y vencerá el día 15</b>, a partir del <b>1 Mar 2023</b>{" "}
+                y la última factura se enviará el <b>1 de Dic 2023</b>
               </Text>
             </Stack>
           </HStack>
@@ -119,6 +154,4 @@ const FormContent: React.FC<Props> = ({ initialRef }) => {
       </Form>
     </Formik>
   )
-};
-
-export default FormContent;
+}

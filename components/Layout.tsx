@@ -1,14 +1,18 @@
 "use client"
 
-import { Container, Flex, Stack, useMediaQuery } from '@chakra-ui/react';
-import Sidebar from './Sidebar';
+import * as React from "react"
+import { Container, Flex, Stack, useMediaQuery } from "@chakra-ui/react"
+import Sidebar from "./Sidebar"
 
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 const Layout = ({ children }: Props) => {
-  const [isDesktop] = useMediaQuery("(min-width: 768px)", { ssr: true, fallback: true });
+  const [isDesktop] = useMediaQuery("(min-width: 768px)", {
+    ssr: true,
+    fallback: true,
+  })
 
   return (
     <Flex>
@@ -21,6 +25,6 @@ const Layout = ({ children }: Props) => {
       </Container>
     </Flex>
   )
-};
+}
 
-export default Layout;
+export default Layout

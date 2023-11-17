@@ -1,12 +1,15 @@
-import { FC } from "react";
-import { Badge } from "@chakra-ui/react";
-import { setBgColorStatus, setColorTextStatus } from "../utilities/setColorSchemeBadge"
-import { MockDataTypes } from "../types/mock-data-types";
+import { FC } from "react"
+import { Badge } from "@chakra-ui/react"
+import {
+  setBgColorStatus,
+  setColorTextStatus,
+} from "../utilities/setColorSchemeBadge"
+import { MockDataTypes } from "../types/mock-data-types"
 
 interface Props {
-  size: string;
-  member: MockDataTypes;
-};
+  size: string
+  member: MockDataTypes
+}
 
 const BadgeTheme: FC<Props> = ({ size, member }) => {
   return (
@@ -19,6 +22,6 @@ const BadgeTheme: FC<Props> = ({ size, member }) => {
       {member.student.status.label}
     </Badge>
   )
-};
+}
 
-export default BadgeTheme;
+export default BadgeTheme

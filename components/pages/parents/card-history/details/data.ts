@@ -1,14 +1,14 @@
 export type NavData = Array<{
-  title: string;
-  due: string;
-  dueAmount?: boolean;
+  title: string
+  due: string
+  dueAmount?: boolean
   items: Array<{
-    label: string;
-    value: string;
-    discount?: boolean;
-    priceTotal?: boolean;
-  }>;
-}>;
+    label: string
+    value: string
+    discount?: boolean
+    priceTotal?: boolean
+  }>
+}>
 
 export const data: NavData = [
   {
@@ -70,4 +70,4 @@ export const data: NavData = [
       { label: "Total a pagar", value: "$32.739,40", priceTotal: true },
     ],
   },
-];
+]

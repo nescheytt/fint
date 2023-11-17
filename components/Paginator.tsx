@@ -1,26 +1,35 @@
 "use client"
 
-import { FC, useState } from "react";
-import { ButtonGroup, Button, Box, IconButton, useMediaQuery } from "@chakra-ui/react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { FC, useState } from "react"
+import {
+  ButtonGroup,
+  Button,
+  Box,
+  IconButton,
+  useMediaQuery,
+} from "@chakra-ui/react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 
 interface Props {
-  totalPages?: number;
-};
+  totalPages?: number
+}
 
 const Paginator: FC<Props> = ({ totalPages = 10 }) => {
-  const [isDesktop] = useMediaQuery("(min-width: 768px)", { ssr: true, fallback: true });
-  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [isDesktop] = useMediaQuery("(min-width: 768px)", {
+    ssr: true,
+    fallback: true,
+  })
+  const [currentPage, setCurrentPage] = useState<number>(1)
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page)
-  };
+  }
 
-  const pages = [];
+  const pages = []
 
   if (totalPages <= 7) {
     for (let i = 1; i <= totalPages; i++) {
-      const isActive = i === currentPage;
+      const isActive = i === currentPage
 
       pages.push(
         <Button
@@ -33,17 +42,17 @@ const Paginator: FC<Props> = ({ totalPages = 10 }) => {
           colorScheme="grayIron"
           fontWeight={500}
           _hover={{
-            bg: 'grayIron.150'
+            bg: "grayIron.150",
           }}
           onClick={() => handlePageChange(i)}
         >
           {i}
         </Button>
-      );
+      )
     }
   } else {
-    let startPage = 1;
-    let endPage = totalPages;
+    let startPage = 1
+    let endPage = totalPages
 
     if (currentPage > 3) {
       pages.push(
@@ -59,7 +68,7 @@ const Paginator: FC<Props> = ({ totalPages = 10 }) => {
         >
           1
         </Button>
-      );
+      )
 
       pages.push(
         <Button
@@ -69,18 +78,20 @@ const Paginator: FC<Props> = ({ totalPages = 10 }) => {
           fontWeight={500}
           variant="ghost"
           isDisabled
-        >...</Button>
-      );
+        >
+          ...
+        </Button>
+      )
 
-      startPage = currentPage - 2;
+      startPage = currentPage - 2
     }
 
     if (currentPage < totalPages - 3) {
-      endPage = currentPage + 2;
+      endPage = currentPage + 2
     }
 
     for (let i = startPage; i <= endPage; i++) {
-      const isActive = i === currentPage;
+      const isActive = i === currentPage
       pages.push(
         <Button
           key={i}
@@ -92,13 +103,13 @@ const Paginator: FC<Props> = ({ totalPages = 10 }) => {
           fontWeight={500}
           colorScheme="grayIron"
           _hover={{
-            bg: 'grayIron.150'
+            bg: "grayIron.150",
           }}
           onClick={() => handlePageChange(i)}
         >
           {i}
         </Button>
-      );
+      )
     }
 
     if (currentPage < totalPages - 3) {
@@ -110,8 +121,10 @@ const Paginator: FC<Props> = ({ totalPages = 10 }) => {
           fontWeight={500}
           variant="ghost"
           isDisabled
-        >...</Button>
-      );
+        >
+          ...
+        </Button>
+      )
       pages.push(
         <Button
           key={totalPages}
@@ -122,31 +135,59 @@ const Paginator: FC<Props> = ({ totalPages = 10 }) => {
           fontWeight={500}
           colorScheme="grayIron"
           _hover={{
-            bg: 'grayIron.150'
+            bg: "grayIron.150",
           }}
           onClick={() => handlePageChange(totalPages)}
         >
           {totalPages}
         </Button>
-      );
+      )
     }
   }
 
   return (
     <ButtonGroup w="full" justifyContent="space-between">
       {isDesktop ? (
-        <Button px={3.5} leftIcon={<ArrowLeft size={20} />} colorScheme="grayIron" variant="outline" isDisabled>Anterior</Button>
+        <Button
+          px={3.5}
+          leftIcon={<ArrowLeft size={20} />}
+          colorScheme="grayIron"
+          variant="outline"
+          isDisabled
+        >
+          Anterior
+        </Button>
       ) : (
-        <IconButton px={3.5} aria-label='Previous page' icon={<ArrowLeft size={20} />} colorScheme="grayIron" variant="outline" isDisabled />
+        <IconButton
+          px={3.5}
+          aria-label="Previous page"
+          icon={<ArrowLeft size={20} />}
+          colorScheme="grayIron"
+          variant="outline"
+          isDisabled
+        />
       )}
       <Box>{pages}</Box>
       {isDesktop ? (
-        <Button px={3.5} rightIcon={<ArrowRight size={20} />} colorScheme="grayIron" variant="outline">Siguiente</Button>
+        <Button
+          px={3.5}
+          rightIcon={<ArrowRight size={20} />}
+          colorScheme="grayIron"
+          variant="outline"
+        >
+          Siguiente
+        </Button>
       ) : (
-        <IconButton px={3.5} aria-label='Next page' icon={<ArrowRight size={20} />} colorScheme="grayIron" variant="outline" />
+        <IconButton
+          px={3.5}
+          aria-label="Next page"
+          icon={<ArrowRight size={20} />}
+          colorScheme="grayIron"
+          variant="outline"
+        />
       )}
     </ButtonGroup>
-  );
-};
+  )
+}
 
-export default Paginator;
+export default Paginator

@@ -9,7 +9,7 @@ export interface MockDataTypes {
       id: number
       label: string
     }
-  },
+  }
   payment: {
     amount: string
     code: string
@@ -19,7 +19,7 @@ export interface MockDataTypes {
       id: number
       label: string
     }
-  },
+  }
   bill: {
     amount: string
     code: string
@@ -29,5 +29,5 @@ export interface MockDataTypes {
       id: number
       label: string
     }
-  },
+  }
 }

@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import NextLink from "next/link";
+import NextLink from "next/link"
 import {
   Box,
   Button,
@@ -9,25 +9,35 @@ import {
   Stack,
   Text,
   useBreakpointValue,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react"
 
 export default function Page() {
   return (
-    <Box as="section" bg="bg.accent.default" color="fg.accent.default" py={{ base: '16', md: '24' }}>
+    <Box
+      as="section"
+      bg="bg.accent.default"
+      color="fg.accent.default"
+      py={{ base: "16", md: "24" }}
+    >
       <Container>
-        <Stack spacing={{ base: '8', md: '10' }} align="center">
-          <Stack spacing={{ base: '4', md: '6' }} textAlign="center">
+        <Stack spacing={{ base: "8", md: "10" }} align="center">
+          <Stack spacing={{ base: "4", md: "6" }} textAlign="center">
             <Stack spacing="3">
-              <Heading size={{ base: 'md', md: 'lg' }} fontWeight="semibold">
+              <Heading size={{ base: "md", md: "lg" }} fontWeight="semibold">
                 La única solución de cobros que tu colegio necesita
               </Heading>
             </Stack>
-            <Text color="fg.accent.muted" fontSize={{ base: 'lg', md: 'xl' }} maxW="3xl">
-              Simplificamos la cobranza, facturación y conciliación de aranceles.
+            <Text
+              color="fg.accent.muted"
+              fontSize={{ base: "lg", md: "xl" }}
+              maxW="3xl"
+            >
+              Simplificamos la cobranza, facturación y conciliación de
+              aranceles.
             </Text>
           </Stack>
 
-          <Stack direction={{ base: 'column-reverse', md: 'row' }}>
+          <Stack direction={{ base: "column-reverse", md: "row" }}>
             <NextLink href="/bills">
               <Button
                 variant="primary"

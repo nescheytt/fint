@@ -5,6 +5,6 @@ export interface MockDataTypes {
   concept: {
     id: number
     label: string
-  },
+  }
   amount: string
 }

@@ -3,20 +3,12 @@ import {
   Button,
   HStack,
   Stack,
-  Tag,
-  TagLabel,
   Text,
   Icon,
-  Badge,
   Heading,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { FiDownloadCloud, FiSearch, FiPlus, FiLock } from "react-icons/fi";
-import { ST } from "next/dist/shared/lib/utils";
-import AlertDebit from "./alert-debit";
-import AlertDue from "./alert-balance-due";
-import Details from "./details";
-import { data } from "./details/data";
+} from "@chakra-ui/react"
+import { FiLock } from "react-icons/fi"
+import AlertDue from "./alert-balance-due"
 
 const CardPayment = () => {
   return (
@@ -89,7 +81,7 @@ const CardPayment = () => {
         <AlertDue />
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default CardPayment;
+export default CardPayment

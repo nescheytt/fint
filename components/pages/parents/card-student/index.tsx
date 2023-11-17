@@ -1,4 +1,4 @@
-import { Avatar, Box, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import { Avatar, Box, Stack, Text, useColorModeValue } from "@chakra-ui/react"
 
 const CardStudent = () => {
   return (
@@ -22,7 +22,7 @@ const CardStudent = () => {
         </Text>
       </Stack>
     </Box>
-  );
-};
+  )
+}
 
-export default CardStudent;
+export default CardStudent

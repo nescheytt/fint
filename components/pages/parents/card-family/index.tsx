@@ -1,4 +1,4 @@
-import { Box, Image, VStack, Stack, Text } from "@chakra-ui/react";
+import { Box, Image, VStack, Stack, Text } from "@chakra-ui/react"
 
 const CardFamily = () => {
   return (
@@ -24,7 +24,7 @@ const CardFamily = () => {
         </VStack>
       </Stack>
     </Box>
-  );
-};
+  )
+}
 
-export default CardFamily;
+export default CardFamily

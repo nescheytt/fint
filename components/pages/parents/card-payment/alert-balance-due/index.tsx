@@ -1,5 +1,5 @@
-import { Box, Icon, Stack, Text, useColorModeValue } from "@chakra-ui/react";
-import { FiRefreshCcw, FiAlertCircle } from "react-icons/fi";
+import { Box, Icon, Stack, Text } from "@chakra-ui/react"
+import { FiAlertCircle } from "react-icons/fi"
 
 const Alerts = () => {
   return (
@@ -31,7 +31,7 @@ const Alerts = () => {
         </Stack>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default Alerts;
+export default Alerts

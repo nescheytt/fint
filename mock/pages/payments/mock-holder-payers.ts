@@ -1,6 +1,6 @@
 export const mockListHolderPayers = [
   {
-    name: 'Daniel Rossi',
-    relationship: 'Padre'
-  }
-];
+    name: "Daniel Rossi",
+    relationship: "Padre",
+  },
+]

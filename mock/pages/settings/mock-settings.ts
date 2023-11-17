@@ -1,72 +1,72 @@
 export const mockData = [
-  { 
+  {
     id: 1,
-    plan: 'Maternal completo',
+    plan: "Maternal completo",
     quantityStudents: 0,
     concept: {
       id: 1,
-      label: 'Borrador',
+      label: "Borrador",
     },
-    amount: '36.000'
+    amount: "36.000",
   },
-  { 
+  {
     id: 2,
-    plan: 'Maternal 2023 turno Mañana',
+    plan: "Maternal 2023 turno Mañana",
     quantityStudents: 50,
     concept: {
       id: 2,
-      label: 'Deshabilitado',
+      label: "Deshabilitado",
     },
-    amount: '40.000'
+    amount: "40.000",
   },
-  { 
+  {
     id: 3,
-    plan: 'Maternal 2023 turno tarde',
+    plan: "Maternal 2023 turno tarde",
     quantityStudents: 62,
     concept: {
       id: 3,
-      label: 'Activo',
+      label: "Activo",
     },
-    amount: '37.500'
+    amount: "37.500",
   },
-  { 
+  {
     id: 4,
-    plan: 'Inicial 2023 Primer grado',
+    plan: "Inicial 2023 Primer grado",
     quantityStudents: 80,
     concept: {
       id: 3,
-      label: 'Activo',
+      label: "Activo",
     },
-    amount: '37.500'
+    amount: "37.500",
   },
-  { 
+  {
     id: 5,
-    plan: 'Inicial 2023 Segundo grado',
+    plan: "Inicial 2023 Segundo grado",
     quantityStudents: 80,
     concept: {
       id: 3,
-      label: 'Activo',
+      label: "Activo",
     },
-    amount: '40.000'
+    amount: "40.000",
   },
-  { 
+  {
     id: 6,
-    plan: 'Inicial 2023 Tercer y Cuarto grado',
+    plan: "Inicial 2023 Tercer y Cuarto grado",
     quantityStudents: 63,
     concept: {
       id: 3,
-      label: 'Activo',
+      label: "Activo",
     },
-    amount: '36.000'
+    amount: "36.000",
   },
-  { 
+  {
     id: 7,
-    plan: 'Inicial 2023 5to a 7mo.',
+    plan: "Inicial 2023 5to a 7mo.",
     quantityStudents: 248,
     concept: {
       id: 3,
-      label: 'Activo',
+      label: "Activo",
     },
-    amount: '36.000'
-  }
+    amount: "36.000",
+  },
 ]

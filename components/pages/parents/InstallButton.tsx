@@ -1,14 +1,14 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
 export default function InstallButton() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(true)
   useEffect(() => {
     if (!window.matchMedia("(display-mode: standalone)").matches) {
-      setVisible(false);
+      setVisible(false)
     }
-  }, []);
+  }, [])
 
   return (
     <>
@@ -38,5 +38,5 @@ export default function InstallButton() {
         Guardar
       </a>
     </>
-  );
+  )
 }

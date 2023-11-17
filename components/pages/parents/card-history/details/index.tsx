@@ -1,3 +1,4 @@
+import * as React from "react"
 import {
   Accordion,
   AccordionButton,
@@ -14,19 +15,19 @@ import {
   Stack,
   Text,
   useColorModeValue,
-} from "@chakra-ui/react";
-import { FiFileText, FiDownload } from "react-icons/fi";
-import { NavData } from "./data";
+} from "@chakra-ui/react"
+import { FiFileText, FiDownload } from "react-icons/fi"
+import { NavData } from "./data"
 
 type ItemProps = {
-  children: React.ReactNode;
-  discount?: boolean;
-  value: string;
-  priceTotal?: boolean;
-};
+  children: React.ReactNode
+  discount?: boolean
+  value: string
+  priceTotal?: boolean
+}
 
 const Item = (props: ItemProps) => {
-  const { children, discount, value, priceTotal } = props;
+  const { children, discount, value, priceTotal } = props
 
   return (
     <HStack
@@ -52,15 +53,15 @@ const Item = (props: ItemProps) => {
         {value}
       </Text>
     </HStack>
-  );
-};
+  )
+}
 
 type NavAccordionProps = {
-  data: NavData;
-};
+  data: NavData
+}
 
 const Details = (props: NavAccordionProps) => {
-  const { data } = props;
+  const { data } = props
 
   return (
     <Box
@@ -148,7 +149,7 @@ const Details = (props: NavAccordionProps) => {
         ))}
       </Accordion>
     </Box>
-  );
-};
+  )
+}
 
-export default Details;
+export default Details

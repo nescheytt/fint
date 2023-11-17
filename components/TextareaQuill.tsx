@@ -1,35 +1,52 @@
 "use client"
 
-import { FC, useState } from 'react';
-import 'react-quill/dist/quill.snow.css';
+import { FC, useState } from "react"
+import "react-quill/dist/quill.snow.css"
 
 const formats = [
-  'header',
-  'bold', 'italic', 'underline', 'color', 'background',
-  'align', 'list', 'bullet', 'indent', 'indent', 'blockquote',
-  'strike',
-  'clean',
-];
+  "header",
+  "bold",
+  "italic",
+  "underline",
+  "color",
+  "background",
+  "align",
+  "list",
+  "bullet",
+  "indent",
+  "indent",
+  "blockquote",
+  "strike",
+  "clean",
+]
 
 const modules = {
   toolbar: [
-    [{ 'header': [false, 1, 2, 3] }],
-    ['bold', 'italic', 'underline', { 'color': [] }, { 'background': [] }],
-    [{ 'align': [] }, { 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }, 'blockquote'],
-    ['strike'],
-    ['clean'],
-  ]
-};
-
+    [{ header: [false, 1, 2, 3] }],
+    ["bold", "italic", "underline", { color: [] }, { background: [] }],
+    [
+      { align: [] },
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+      "blockquote",
+    ],
+    ["strike"],
+    ["clean"],
+  ],
+}
 
 const TextareaQuill: FC = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("")
 
-  const ReactQuill = typeof window === 'object' ? require('react-quill') : () => false;
+  const ReactQuill =
+    typeof window === "object" ? require("react-quill") : () => false
 
   return (
     <>
-      <style>{`
+      <style>
+        {`
           .quill {
             border: 1px solid;
             border-color: #EAECF0;
@@ -90,6 +107,6 @@ const TextareaQuill: FC = () => {
       />
     </>
   )
-};
+}
 
-export default TextareaQuill;
+export default TextareaQuill

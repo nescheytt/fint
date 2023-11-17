@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   Box,
@@ -16,10 +16,16 @@ import {
   Text,
   Icon,
   useColorModeValue,
-} from "@chakra-ui/react";
-import { FiFileText } from "react-icons/fi";
+} from "@chakra-ui/react"
+import { FiFileText } from "react-icons/fi"
 
-export default function DrawerSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+export default function DrawerSidebar({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean
+  onClose: () => void
+}) {
   return (
     <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="md">
       <DrawerOverlay />
@@ -184,5 +190,5 @@ export default function DrawerSidebar({ isOpen, onClose }: { isOpen: boolean; on
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-  );
+  )
 }

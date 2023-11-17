@@ -1,12 +1,6 @@
-import {
-  Button,
-  HStack,
-  Link,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import Details from "./details";
-import { data } from "./details/data";
+import { Button, HStack, Link, Text, useColorModeValue } from "@chakra-ui/react"
+import Details from "./details"
+import { data } from "./details/data"
 
 const CardPayment = () => {
   return (
@@ -30,7 +24,7 @@ const CardPayment = () => {
 
       <Details data={data} />
     </>
-  );
-};
+  )
+}
 
-export default CardPayment;
+export default CardPayment

@@ -1,25 +1,49 @@
-import { FC } from 'react';
-import NextLink from 'next/link';
-import { Box, Card, Center, HStack, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
-import { ChevronRight } from 'lucide-react';
-import { mockListDebts } from '../../../../mock/pages/students/mock-debts';
+import { FC } from "react"
+import NextLink from "next/link"
+import {
+  Box,
+  Card,
+  Center,
+  HStack,
+  LinkBox,
+  LinkOverlay,
+  Text,
+} from "@chakra-ui/react"
+import { ChevronRight } from "lucide-react"
+import { mockListDebts } from "../../../../mock/pages/students/mock-debts"
 
 interface DebtProps {
   debt: {
     type: string
     value: string
   }
-};
+}
 
 const DebtFamily: FC<DebtProps> = ({ debt }) => {
-  const { type, value } = debt;
+  const { type, value } = debt
 
   return (
     <LinkBox as="article">
-      <HStack px={5} py={4} spacing={0} bgColor="warning.25" borderBottom="1px solid" borderColor="grayIron.200">
+      <HStack
+        px={5}
+        py={4}
+        spacing={0}
+        bgColor="warning.25"
+        borderBottom="1px solid"
+        borderColor="grayIron.200"
+      >
         <Box width="full">
-          <Text textTransform="uppercase" fontSize="xs" fontWeight={600} color="warning.700">Deuda {type}</Text>
-          <Text fontSize="2xl" fontWeight={600} color="gray.900">${value}</Text>
+          <Text
+            textTransform="uppercase"
+            fontSize="xs"
+            fontWeight={600}
+            color="warning.700"
+          >
+            Deuda {type}
+          </Text>
+          <Text fontSize="2xl" fontWeight={600} color="gray.900">
+            ${value}
+          </Text>
         </Box>
 
         <LinkOverlay as={NextLink} href="#">
@@ -30,26 +54,41 @@ const DebtFamily: FC<DebtProps> = ({ debt }) => {
       </HStack>
     </LinkBox>
   )
-};
+}
 
 const DebtIndividual: FC<DebtProps> = ({ debt }) => {
-  const { type, value } = debt;
+  const { type, value } = debt
 
   return (
     <HStack px={5} py={4} bgColor="grayIron.25">
       <Box w="full">
-        <Text textTransform="uppercase" fontSize="xs" fontWeight={600} color="grayIron.500">Deuda {type}</Text>
-        <Text fontSize="xl" fontWeight={600} color="gray.900">${value}</Text>
+        <Text
+          textTransform="uppercase"
+          fontSize="xs"
+          fontWeight={600}
+          color="grayIron.500"
+        >
+          Deuda {type}
+        </Text>
+        <Text fontSize="xl" fontWeight={600} color="gray.900">
+          ${value}
+        </Text>
       </Box>
     </HStack>
   )
-};
+}
 
 export const Debts: FC = () => {
   return (
-    <Card border="1px solid" borderColor="grayIron.200" borderRadius="xl" overflow="hidden" boxShadow="xs">
+    <Card
+      border="1px solid"
+      borderColor="grayIron.200"
+      borderRadius="xl"
+      overflow="hidden"
+      boxShadow="xs"
+    >
       {mockListDebts.map((debt, index) => {
-        if (debt.type === 'familiar') {
+        if (debt.type === "familiar") {
           return <DebtFamily key={index} debt={debt} />
         }
 
@@ -57,4 +96,4 @@ export const Debts: FC = () => {
       })}
     </Card>
   )
-};
+}

@@ -1,13 +1,13 @@
 "use client"
 
-import React from 'react';
-import { Stack, useDisclosure } from '@chakra-ui/react';
-import ModalNewReminder from './modal';
-import BillStartReminders from './BillStartReminders';
-import BillDueReminders from './BillDueReminders';
+import React from "react"
+import { Stack, useDisclosure } from "@chakra-ui/react"
+import ModalNewReminder from "./modal"
+import BillStartReminders from "./BillStartReminders"
+import BillDueReminders from "./BillDueReminders"
 
 const Reminders: React.FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
@@ -19,6 +19,6 @@ const Reminders: React.FC = () => {
       <ModalNewReminder isOpen={isOpen} onClose={onClose} />
     </>
   )
-};
+}
 
-export default Reminders;
+export default Reminders

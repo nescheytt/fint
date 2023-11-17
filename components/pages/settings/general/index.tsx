@@ -1,7 +1,7 @@
-import React from 'react';
-import { Stack, StackDivider } from "@chakra-ui/react";
-import Information from './Information';
-import Notifications from './Notifications';
+import React from "react"
+import { Stack, StackDivider } from "@chakra-ui/react"
+import Information from "./Information"
+import Notifications from "./Notifications"
 
 const General: React.FC = () => {
   return (
@@ -10,6 +10,6 @@ const General: React.FC = () => {
       <Notifications />
     </Stack>
   )
-};
+}
 
-export default General;
+export default General

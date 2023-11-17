@@ -1,14 +1,17 @@
 "use client"
 
-import { Flex, Stack, useMediaQuery } from '@chakra-ui/react';
-import Layout from '../../components/Layout';
-import Title from '../../components/Title';
-import Filters from '../../components/Filters';
-import { List } from '../../components/pages/bills/list';
-import Paginator from '../../components/Paginator';
+import { Flex, Stack, useMediaQuery } from "@chakra-ui/react"
+import Layout from "../../components/Layout"
+import Title from "../../components/Title"
+import Filters from "../../components/Filters"
+import { List } from "../../components/pages/bills/list"
+import Paginator from "../../components/Paginator"
 
 export default function Page() {
-  const [isDesktop] = useMediaQuery("(min-width: 768px)", { ssr: true, fallback: true });
+  const [isDesktop] = useMediaQuery("(min-width: 768px)", {
+    ssr: true,
+    fallback: true,
+  })
 
   return (
     <Layout>
@@ -18,7 +21,17 @@ export default function Page() {
         <List />
       </Stack>
 
-      <Flex bgColor="white" border="1px solid" borderColor="gray.200" boxShadow="xs" justifyContent="center" borderRadius="0 0 8px 8px" py={4.5} px={isDesktop ? 6 : 5} borderTop={0}>
+      <Flex
+        bgColor="white"
+        border="1px solid"
+        borderColor="gray.200"
+        boxShadow="xs"
+        justifyContent="center"
+        borderRadius="0 0 8px 8px"
+        py={4.5}
+        px={isDesktop ? 6 : 5}
+        borderTop={0}
+      >
         <Paginator />
       </Flex>
     </Layout>

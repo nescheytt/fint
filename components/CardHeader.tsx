@@ -30,23 +30,31 @@ interface Args {
 const Container = ({ button, icon, title }: Args) => {
   if (button && !icon) {
     return (
-      <HStack justifyContent='space-between' spacing={0}>
-        <Text fontSize='md' fontWeight={600} color='gray.900' lineHeight={8}>{title}</Text>
-        <Button colorScheme="fint" variant="link" onClick={button.onClick}>{button.text}</Button>
+      <HStack justifyContent="space-between" spacing={0}>
+        <Text fontSize="md" fontWeight={600} color="gray.900" lineHeight={8}>
+          {title}
+        </Text>
+        <Button colorScheme="fint" variant="link" onClick={button.onClick}>
+          {button.text}
+        </Button>
       </HStack>
     )
   }
 
   if (button && icon) {
     return (
-      <HStack justifyContent='space-between' spacing={0}>
+      <HStack justifyContent="space-between" spacing={0}>
         <HStack spacing={3}>
-          <Box color={icon.color || 'fint.600'}>
-            <Icon name={icon.name || 'Apple'} size={icon.size || 16} />
+          <Box color={icon.color || "fint.600"}>
+            <Icon name={icon.name || "Apple"} size={icon.size || 16} />
           </Box>
-          <Text fontSize='md' fontWeight={600} color='gray.900' lineHeight={8}>{title}</Text>
+          <Text fontSize="md" fontWeight={600} color="gray.900" lineHeight={8}>
+            {title}
+          </Text>
         </HStack>
-        <Button colorScheme="fint" variant="link" onClick={button.onClick}>{button.text}</Button>
+        <Button colorScheme="fint" variant="link" onClick={button.onClick}>
+          {button.text}
+        </Button>
       </HStack>
     )
   }
@@ -54,22 +62,32 @@ const Container = ({ button, icon, title }: Args) => {
   if (!button && icon) {
     return (
       <HStack spacing={3}>
-        <Box color={icon.color || 'fint.600'}>
-          <Icon name={icon.name || 'Apple'} size={icon.size || 16} />
+        <Box color={icon.color || "fint.600"}>
+          <Icon name={icon.name || "Apple"} size={icon.size || 16} />
         </Box>
-        <Text fontSize="md" fontWeight={600} color="gray.900" lineHeight={8}>{title}</Text>
+        <Text fontSize="md" fontWeight={600} color="gray.900" lineHeight={8}>
+          {title}
+        </Text>
       </HStack>
     )
   }
 
-  return <Text fontSize="md" fontWeight={600} color="gray.900" lineHeight={8}>{title}</Text>
+  return (
+    <Text fontSize="md" fontWeight={600} color="gray.900" lineHeight={8}>
+      {title}
+    </Text>
+  )
 }
 
 export const CardHeaderDrawer = ({ button, icon, title }: Args) => {
-
   return (
-    <CardHeader px={5} py='11.5px' borderBottom='1px solid' borderColor='grayIron.100'>
+    <CardHeader
+      px={5}
+      py="11.5px"
+      borderBottom="1px solid"
+      borderColor="grayIron.100"
+    >
       <Container button={button} icon={icon} title={title} />
     </CardHeader>
   )
-};
+}

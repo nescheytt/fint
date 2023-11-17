@@ -1,6 +1,6 @@
-import { useTheme } from '@chakra-ui/react';
-import { defineStyle, defineStyleConfig } from '@chakra-ui/react';
-import { mode } from "@chakra-ui/theme-tools";
+import { useTheme } from "@chakra-ui/react"
+import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
+import { mode } from "@chakra-ui/theme-tools"
 
 // Base Styles
 const baseStyle = defineStyle({
@@ -11,16 +11,16 @@ const baseStyle = defineStyle({
 // Sizes
 const sizes = {
   md: defineStyle({
-    fontSize: 'sm',
-    lineHeight: '20px',
+    fontSize: "sm",
+    lineHeight: "20px",
     px: 4,
     py: 3,
-  })
-};
- 
+  }),
+}
+
 // Variants
 const variantSolid = defineStyle((props) => {
-  const { colorScheme: c } = props;
+  const { colorScheme: c } = props
 
   if (c === "grayIron") {
     const bg = mode(`grayIron.150`, `whiteAlpha.200`)(props)
@@ -37,10 +37,10 @@ const variantSolid = defineStyle((props) => {
       },
       _active: { bg: mode(`grayIron.300`, `whiteAlpha.400`)(props) },
     }
-  };
+  }
 
-  return {...useTheme};
-});
+  return { ...useTheme }
+})
 
 const variantOutline = defineStyle((props) => {
   const { colorScheme: c } = props
@@ -54,20 +54,20 @@ const variantOutline = defineStyle((props) => {
       { marginBottom: "-1px" },
     ...useTheme,
   }
-});
+})
 
 const variants = {
   solid: variantSolid,
   outline: variantOutline,
-};
+}
 
 export const buttonTheme = defineStyleConfig({
   baseStyle,
   variants,
   sizes,
   defaultProps: {
-    size: 'md',
-    variant: 'solid',
-    colorScheme: 'fint'
+    size: "md",
+    variant: "solid",
+    colorScheme: "fint",
   },
-});
+})

@@ -1,8 +1,8 @@
-import Script from "next/script";
+import Script from "next/script"
 
 export default function SWRegister() {
-  return(
-    <Script>{`
+  return (
+    <Script id="sw-register">{`
       if (navigator.serviceWorker) {
         navigator.serviceWorker
           .register('./sw.parents.js', { scope: '/parents' })
@@ -13,5 +13,5 @@ export default function SWRegister() {
           });
       }
     `}</Script>
-  );
+  )
 }

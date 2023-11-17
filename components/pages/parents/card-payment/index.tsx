@@ -8,11 +8,10 @@ import {
   Heading,
   useColorModeValue,
   HStack,
-} from "@chakra-ui/react";
-import { FiLock } from "react-icons/fi";
-import AlertDebit from "./alert-debit";
-import Details from "./details";
-import { data } from "./details/data";
+} from "@chakra-ui/react"
+import { FiLock } from "react-icons/fi"
+import Details from "./details"
+import { data } from "./details/data"
 
 const CardPayment = () => {
   return (
@@ -89,7 +88,7 @@ const CardPayment = () => {
 
       <Details data={data} />
     </>
-  );
-};
+  )
+}
 
-export default CardPayment;
+export default CardPayment
