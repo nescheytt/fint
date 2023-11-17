@@ -5,27 +5,33 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@chakra-ui/anatomy':
+    specifier: ^2.2.2
+    version: 2.2.2
   '@chakra-ui/icons':
     specifier: 2.1.1
     version: 2.1.1(@chakra-ui/system@2.6.2)(react@18.2.0)
+  '@chakra-ui/next-js':
+    specifier: ^2.2.0
+    version: 2.2.0(@chakra-ui/react@2.8.2)(@emotion/react@11.11.1)(next@14.0.3)(react@18.2.0)
   '@chakra-ui/pro-theme':
     specifier: 0.10.0
     version: 0.10.0
   '@chakra-ui/react':
     specifier: 2.8.2
     version: 2.8.2(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.37)(framer-motion@10.16.5)(react-dom@18.2.0)(react@18.2.0)
+  '@chakra-ui/styled-system':
+    specifier: ^2.9.2
+    version: 2.9.2
+  '@chakra-ui/theme-tools':
+    specifier: 2.1.2
+    version: 2.1.2(@chakra-ui/styled-system@2.9.2)
   '@emotion/react':
     specifier: 11.11.1
     version: 11.11.1(@types/react@18.2.37)(react@18.2.0)
   '@emotion/styled':
     specifier: 11.11.0
     version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.37)(react@18.2.0)
-  '@fontsource/inter':
-    specifier: 5.0.15
-    version: 5.0.15
-  '@next/font':
-    specifier: 14.0.3
-    version: 14.0.3(next@14.0.3)
   '@types/node':
     specifier: 20.9.1
     version: 20.9.1
@@ -528,6 +534,21 @@ packages:
       react-remove-scroll: 2.5.7(@types/react@18.2.37)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
+    dev: false
+
+  /@chakra-ui/next-js@2.2.0(@chakra-ui/react@2.8.2)(@emotion/react@11.11.1)(next@14.0.3)(react@18.2.0):
+    resolution: {integrity: sha512-brCz0UEOlImX4Np2jDIaljZJkW6kiDSuXG5erxvYjZlklLhmti1zj0o1sSjt5yff1xndfgHoOJb+BYG5wx+vDg==}
+    peerDependencies:
+      '@chakra-ui/react': '>=2.4.0'
+      '@emotion/react': '>=11'
+      next: '>=13'
+      react: '>=18'
+    dependencies:
+      '@chakra-ui/react': 2.8.2(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.37)(framer-motion@10.16.5)(react-dom@18.2.0)(react@18.2.0)
+      '@emotion/cache': 11.11.0
+      '@emotion/react': 11.11.1(@types/react@18.2.37)(react@18.2.0)
+      next: 14.0.3(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
     dev: false
 
   /@chakra-ui/number-input@2.1.2(@chakra-ui/system@2.6.2)(react@18.2.0):
@@ -1426,10 +1447,6 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
-  /@fontsource/inter@5.0.15:
-    resolution: {integrity: sha512-/IoWYEXl8lqJEx50JqNPT+bI4VNwxb/bg2oOfvG8PiEsDsmHRFvWBVHlohBNn1+QdBf+KbAjU/gb4vlGOSsVWw==}
-    dev: false
-
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
     engines: {node: '>=10.10.0'}
@@ -1458,14 +1475,6 @@ packages:
     resolution: {integrity: sha512-j4K0n+DcmQYCVnSAM+UByTVfIHnYQy2ODozfQP+4RdwtRDfobrIvKq1K4Exb2koJ79HSSa7s6B2SA8T/1YR3RA==}
     dependencies:
       glob: 7.1.7
-    dev: false
-
-  /@next/font@14.0.3(next@14.0.3):
-    resolution: {integrity: sha512-M96skA6j99ri/J9+BpoDOoO9ntadHUyX2CmwSzsLDm3fL3hgyPfskH6Kd92sz6H8cr7ZHV3xNkCTggFvnLdq2Q==}
-    peerDependencies:
-      next: '*'
-    dependencies:
-      next: 14.0.3(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /@next/swc-darwin-arm64@14.0.3:

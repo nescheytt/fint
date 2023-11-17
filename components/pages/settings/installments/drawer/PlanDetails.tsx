@@ -2,7 +2,7 @@ import React from 'react';
 import NextLink from 'next/link';
 import { Card, CardBody, CardProps, HStack, Link, Stack, StackDivider, Text } from "@chakra-ui/react";
 import { MockDataTypes } from "../../../../../types/mock-settings-types";
-import { CardHeaderDrawer } from "../../../../drawer/CardHeader";
+import { CardHeaderDrawer } from "../../../../CardHeader";
 
 interface Props {
   plan: MockDataTypes;

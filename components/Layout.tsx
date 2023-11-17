@@ -1,14 +1,15 @@
-import { FC, ReactFragment } from 'react';
+"use client"
+
 import { Container, Flex, Stack, useMediaQuery } from '@chakra-ui/react';
 import Sidebar from './Sidebar';
 
 type Props = {
-  children: ReactFragment;
+  children: React.ReactNode;
 };
 
-const Layout: FC<Props> = ({ children }) => {
+const Layout = ({ children }: Props) => {
   const [isDesktop] = useMediaQuery("(min-width: 768px)", { ssr: true, fallback: true });
-  
+
   return (
     <Flex>
       {isDesktop && <Sidebar />}

@@ -1,5 +1,5 @@
 import { Box, Card, CardBody, Center, HStack, Stack, Text } from "@chakra-ui/react";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import { CardHeaderDrawer } from "../../../CardHeader";
 
 export const PaymentMethods = () => {
   return (

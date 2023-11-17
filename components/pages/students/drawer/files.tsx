@@ -1,5 +1,5 @@
 import { Card } from "@chakra-ui/react";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import { CardHeaderDrawer } from "../../../CardHeader";
 
 export const Files = () => {
   return (

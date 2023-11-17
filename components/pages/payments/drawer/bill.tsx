@@ -1,7 +1,7 @@
 import NextLink from 'next/link'
 import { Card, CardBody, Center, HStack, LinkBox, LinkOverlay, Stack, StackDivider, Text } from "@chakra-ui/react";
 import { Download, FileDown } from 'lucide-react';
-import { CardHeaderDrawer } from '../../../drawer/CardHeader';
+import { CardHeaderDrawer } from '../../../CardHeader';
 
 export const Bill = () => {
   return (

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Box, Button, Circle, Grid, GridItem, Flex, HStack, Stack, StackDivider, Text } from '@chakra-ui/react';
 import { Formik, Form } from 'formik';
 import { UploadCloud } from 'lucide-react';
-import logoFint from '../../../images/logo-fint.svg';
+import logoFint from '@/public/logo-fint.svg';
 import InputTheme from '../../../ui/Input';
 
 const FormContent: React.FC = () => {
@@ -32,12 +32,12 @@ const FormContent: React.FC = () => {
     e.stopPropagation();
     setDragging(false);
     const files = Array.from(e.dataTransfer.files);
-    console.log({files})
+    console.log({ files })
   };
 
   function handleFileUpload() {
     const files = fileInputRef.current?.click();
-    console.log({files})
+    console.log({ files })
   };
 
   function handlerSubmit({ values, actions }: any) {
@@ -62,7 +62,7 @@ const FormContent: React.FC = () => {
               <InputTheme type="text" placeholder="Nombre" />
             </GridItem>
           </Grid>
-          
+
           <Grid templateColumns='repeat(24, 1fr)' gap={3}>
             <GridItem colSpan={{ base: 24, md: 6 }}>
               <Stack spacing={0}>

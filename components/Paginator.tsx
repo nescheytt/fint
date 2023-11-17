@@ -1,3 +1,5 @@
+"use client"
+
 import { FC, useState } from "react";
 import { ButtonGroup, Button, Box, IconButton, useMediaQuery } from "@chakra-ui/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -19,7 +21,7 @@ const Paginator: FC<Props> = ({ totalPages = 10 }) => {
   if (totalPages <= 7) {
     for (let i = 1; i <= totalPages; i++) {
       const isActive = i === currentPage;
-      
+
       pages.push(
         <Button
           key={i}
@@ -134,17 +136,17 @@ const Paginator: FC<Props> = ({ totalPages = 10 }) => {
     <ButtonGroup w="full" justifyContent="space-between">
       {isDesktop ? (
         <Button px={3.5} leftIcon={<ArrowLeft size={20} />} colorScheme="grayIron" variant="outline" isDisabled>Anterior</Button>
-        ) : (
+      ) : (
         <IconButton px={3.5} aria-label='Previous page' icon={<ArrowLeft size={20} />} colorScheme="grayIron" variant="outline" isDisabled />
       )}
       <Box>{pages}</Box>
       {isDesktop ? (
         <Button px={3.5} rightIcon={<ArrowRight size={20} />} colorScheme="grayIron" variant="outline">Siguiente</Button>
-        ) : (
+      ) : (
         <IconButton px={3.5} aria-label='Next page' icon={<ArrowRight size={20} />} colorScheme="grayIron" variant="outline" />
       )}
     </ButtonGroup>
-  ); 
+  );
 };
 
 export default Paginator;

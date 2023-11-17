@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from 'react';
 import { Badge, Box, Table, Text, Thead, Tr, Th, Tbody, Td } from "@chakra-ui/react";
 import { mockData } from "../../../../mock/pages/settings/mock-settings";

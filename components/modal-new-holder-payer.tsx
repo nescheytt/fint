@@ -16,7 +16,7 @@ import {
   UseModalProps,
 } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
-import InputTheme from "../ui/Input";
+import InputTheme from "./ui/Input";
 
 interface Props extends UseModalProps {
   finalRef: RefObject<any>;

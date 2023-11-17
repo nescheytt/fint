@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Card, CardBody, Stack, Text, useDisclosure } from "@chakra-ui/react";
-import { ModalNewNote } from "../../../modals/modal-new-note";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import { ModalNewNote } from "../../../modal-new-note";
+import { CardHeaderDrawer } from "../../../CardHeader";
 import { mockListNotes } from "../../../../mock/pages/bills/mock-notes";
 
 export const Notes = () => {

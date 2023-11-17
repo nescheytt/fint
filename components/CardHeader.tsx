@@ -1,5 +1,5 @@
 import { Box, Button, CardHeader, HStack, Text } from "@chakra-ui/react"
-import * as icons from "lucide-react"
+import { icons } from "lucide-react"
 
 interface IconProps {
   color?: string
@@ -58,7 +58,7 @@ const Container = ({ button, icon, title }: Args) => {
           <Icon name={icon.name || 'Apple'} size={icon.size || 16} />
         </Box>
         <Text fontSize="md" fontWeight={600} color="gray.900" lineHeight={8}>{title}</Text>
-      </HStack>  
+      </HStack>
     )
   }
 

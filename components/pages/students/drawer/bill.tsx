@@ -5,7 +5,7 @@ import { ChevronRight, FileText } from 'lucide-react';
 import { mockListBills } from '../../../../mock/pages/students/mock-bills';
 import { MockDataTypes } from '../../../../types/mock-data-types';
 import BadgeTheme from "../../../Badge";
-import { CardHeaderDrawer } from '../../../drawer/CardHeader';
+import { CardHeaderDrawer } from '../../../CardHeader';
 
 interface Props {
   member: MockDataTypes;

@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Box,
   Button,
@@ -16,7 +17,6 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react";
-import * as React from "react";
 import { FiFileText } from "react-icons/fi";
 
 export default function DrawerSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {

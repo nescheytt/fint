@@ -19,9 +19,9 @@ import {
   useRadio,
   UseModalProps,
 } from "@chakra-ui/react";
-import { InfoOutlineIcon } from "@chakra-ui/icons";
+import * as Icon from "@chakra-ui/icons";
 import { Formik, Form, Field } from "formik";
-import InputTheme from "../ui/Input";
+import InputTheme from "./ui/Input";
 
 const RadioCard = (props: any) => {
   const { getInputProps, getCheckboxProps } = useRadio(props)
@@ -159,7 +159,7 @@ const ModalNewPaymentMethods: FC<Props> = ({ isOpen, onClose, finalRef }) => {
                   borderColor="fint.200"
                   borderRadius="xl"
                 >
-                  <InfoOutlineIcon mt={1} color="fint.800" />
+                  <Icon.InfoOutlineIcon mt={1} color="fint.800" />
                   <Stack alignItems="flex-start">
                     <Text lineHeight="20px" color="fint.800">Necesita la autorización firmada de su cliente para guardar su tarjeta y protegerlo de la responsabilidad de devolución de cargo. Haga que su cliente complete y firme este formulario, luego guárdelo de manera segura de acuerdo con PCI-DSS y los requisitos de privacidad de datos.</Text>
                     <Button colorScheme="fint" variant="link" onClick={() => console.log('Descargar formulario')}>Descargar formulario</Button>

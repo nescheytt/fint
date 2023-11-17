@@ -1,4 +1,5 @@
-import { FC } from 'react';
+"use client"
+
 import { Flex, Stack, useMediaQuery } from '@chakra-ui/react';
 import Layout from '../../components/Layout';
 import Title from '../../components/Title';
@@ -6,9 +7,9 @@ import Filters from '../../components/Filters';
 import { List } from '../../components/pages/payments/list';
 import Paginator from '../../components/Paginator';
 
-const PagePayments: FC = () => {
+export default function App() {
   const [isDesktop] = useMediaQuery("(min-width: 768px)", { ssr: true, fallback: true });
-  
+
   return (
     <Layout>
       <Stack spacing={6}>
@@ -22,6 +23,4 @@ const PagePayments: FC = () => {
       </Flex>
     </Layout>
   )
-};
-
-export default PagePayments;
+}

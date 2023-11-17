@@ -1,13 +1,13 @@
 import { Box, Card, CardBody, Center, HStack, IconButton, Stack, Text, useDisclosure } from "@chakra-ui/react";
 import { useRef } from "react";
 import { Pencil } from "lucide-react";
-import ModalNewPaymentMethods from "../../../modals/modal-new-payment-methods";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import ModalNewPaymentMethods from "../../../modal-new-payment-methods";
+import { CardHeaderDrawer } from "../../../CardHeader";
 
 export const PaymentMethods = () => {
   const { isOpen, onClose, onOpen } = useDisclosure()
   const finalRef = useRef(null)
- 
+
   return (
     <>
       <Card border="1px solid" borderColor="grayIron.200" borderRadius="xl" bg="white" boxShadow="xs">
@@ -25,7 +25,7 @@ export const PaymentMethods = () => {
                   <Text color="grayIron.500">Expira 06/24</Text>
                 </Stack>
               </HStack>
-              <IconButton aria-label='Share whatsapp' color="grayIron.500" icon={<Pencil size={20}   />} w="40px" minW={0} h="40px" variant="ghost" />
+              <IconButton aria-label='Share whatsapp' color="grayIron.500" icon={<Pencil size={20} />} w="40px" minW={0} h="40px" variant="ghost" />
             </HStack>
           </Stack>
         </CardBody>

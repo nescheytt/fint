@@ -1,3 +1,5 @@
+"use client"
+
 import { FC, useState } from 'react';
 import { ButtonGroup, IconButton, SelectProps } from '@chakra-ui/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';

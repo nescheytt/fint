@@ -1,3 +1,5 @@
+"use client"
+
 import { Box, Container, Center } from "@chakra-ui/react";
 import CardFamily from "../../components/pages/parents/card-family";
 import CardPayment from "../../components/pages/parents/card-payment";
@@ -5,10 +7,10 @@ import HeadSection from "../../components/pages/parents/HeadSection";
 import InstallButton from "../../components/pages/parents/InstallButton";
 import SWRegister from "../../components/pages/parents/SWRegister";
 
-const PageParents = () => {
+export default function Page() {
   return (
     <Center flex="1">
-      <HeadSection /> 
+      <HeadSection />
       <Box
         as="section"
         w={["md", "xl"]}
@@ -24,6 +26,4 @@ const PageParents = () => {
       <SWRegister />
     </Center>
   );
-};
-
-export default PageParents;
+}

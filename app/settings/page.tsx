@@ -1,4 +1,5 @@
-import { FC } from 'react';
+"use client"
+
 import Layout from '../../components/Layout';
 import Tabs from '../../components/pages/settings/Tabs';
 import Title from '../../components/pages/settings/Title';
@@ -21,13 +22,11 @@ const tabsContent = [
   },
 ];
 
-const PageSettings: FC = () => {
+export default function Page() {
   return (
     <Layout>
       <Title />
       <Tabs content={tabsContent} />
     </Layout>
   )
-};
-
-export default PageSettings;
+}

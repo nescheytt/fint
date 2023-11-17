@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Center, Flex, HStack, Stack, Text } from '@chakra-ui/react';
 import { ArrowDown, Mail } from 'lucide-react';
 import MenuActionsButton from '../../../MenuButton';
-import { WhatsappIcon } from '../../../icons/WhatsappIcon';
+import { WhatsappIcon } from '../../../WhatsappIcon';
 
 const renderTextType = (type: string) => {
   if (type === 'whatsapp') {

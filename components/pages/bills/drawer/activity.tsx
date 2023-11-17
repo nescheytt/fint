@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Box, Card, CardBody, Circle, HStack, Stack, Text } from "@chakra-ui/react";
-import { CardHeaderDrawer } from '../../../drawer/CardHeader';
+import { CardHeaderDrawer } from '../../../CardHeader';
 import { mockActivity } from "../../../../mock/pages/bills/mock-activity";
 
 export const Activity: FC = () => {

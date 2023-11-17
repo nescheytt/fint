@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Button, Card, CardBody, CardFooter, Center, HStack, Link, Stack, StackDivider, Text } from "@chakra-ui/react";
 import { Info, Pencil } from "lucide-react";
 import { mockDetail, mockDetailBonus, mockDetailSubTotal, mockDetailTotal } from '../../../../mock/pages/students/mock-paid-plan';
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import { CardHeaderDrawer } from "../../../CardHeader";
 
 export const PaidPlan: FC = () => {
   return (
@@ -13,7 +13,7 @@ export const PaidPlan: FC = () => {
       <CardFooter px={0} py={0} borderTop="1px solid" borderColor="grayIron.100">
         <Stack spacing={0}>
           <HStack>
-            <Accordion allowToggle  defaultIndex={[0]} w="100%">
+            <Accordion allowToggle defaultIndex={[0]} w="100%">
               <AccordionItem border={0}>
                 <AccordionButton p={0}>
                   <HStack w="100%" justifyContent="space-between" px={5} pt={4.5} pb={4}>
@@ -35,7 +35,7 @@ export const PaidPlan: FC = () => {
                           )
                         })}
                       </Stack>
-                      
+
                       <Stack spacing={4}>
                         {mockDetailBonus.map((item, index) => {
                           return (
@@ -46,7 +46,7 @@ export const PaidPlan: FC = () => {
                           )
                         })}
                       </Stack>
-                      
+
                       <Stack spacing={4}>
                         {mockDetailSubTotal.map((item, index) => {
                           const subtotal = item.item === "Subtotal"
@@ -60,7 +60,7 @@ export const PaidPlan: FC = () => {
                           )
                         })}
                       </Stack>
-                      
+
                       <Stack>
                         {mockDetailTotal.map((item, index) => {
                           return (
@@ -72,7 +72,7 @@ export const PaidPlan: FC = () => {
                         })}
                       </Stack>
                     </Stack>
-                    
+
                     <Button leftIcon={<Pencil size={20} />} colorScheme="grayIron">
                       Editar conceptos del estudiante
                     </Button>

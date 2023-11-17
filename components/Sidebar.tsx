@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { Box, Flex, Image, LinkBox, LinkOverlay, Stack, useMediaQuery } from "@chakra-ui/react";
 import { Archive, ArrowRightCircle, Home, LifeBuoy, LogOut, Settings, Users } from 'lucide-react';
 
@@ -59,7 +59,7 @@ const linksBottomSidebar = [
 
 const Sidebar: FC = () => {
   const [isDesktop] = useMediaQuery("(min-width: 768px)", { ssr: true, fallback: true });
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <Box sx={sidebarStyles}>
@@ -70,13 +70,15 @@ const Sidebar: FC = () => {
           </Flex>
 
           {linksTopSidebar.map((item, index) => {
-            const selected = router.pathname === item.href
+            const { href } = item;
+            const selected = pathname === href
+
             return (
               <LinkBox key={index} py={isDesktop ? 3 : 3.5} px={2.5} bgColor={selected ? "grayIron.150" : "transparent"} borderRadius="lg">
                 <Flex
                   flexDirection={isDesktop ? 'column' : 'row'}
                   alignItems="center"
-                  color={selected ? "fint.600" : "grayIron.600" }
+                  color={selected ? "fint.600" : "grayIron.600"}
                   _hover={{ color: "fint.600" }}
                 >
                   {item.icon(isDesktop)}
@@ -90,7 +92,7 @@ const Sidebar: FC = () => {
                     ml={isDesktop ? 0 : 2}
                     _hover={{ color: "fint.600" }}
                   >
-                      {item.label}
+                    {item.label}
                   </LinkOverlay>
                 </Flex>
               </LinkBox>
@@ -100,13 +102,15 @@ const Sidebar: FC = () => {
 
         <Stack spacing={1}>
           {linksBottomSidebar.map((item, index) => {
-            const selected = router.pathname === item.href
+            const { href } = item;
+            const selected = pathname === href
+
             return (
               <LinkBox key={index} py={isDesktop ? 3 : 3.5} px={2.5} bgColor={selected ? "grayIron.150" : "transparent"} borderRadius="lg">
                 <Flex
                   flexDirection={isDesktop ? 'column' : 'row'}
                   alignItems="center"
-                  color={selected ? "fint.600" : "grayIron.600" }
+                  color={selected ? "fint.600" : "grayIron.600"}
                   _hover={{ color: "fint.600" }}
                 >
                   {item.icon(isDesktop)}

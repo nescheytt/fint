@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import { Card, CardBody, Center, HStack, LinkBox, LinkOverlay, Stack, StackDivider, Text } from "@chakra-ui/react";
 import { ChevronRight } from 'lucide-react';
 import { mockListFamily } from '../../../../mock/pages/students/mock-family';
-import { CardHeaderDrawer } from '../../../drawer/CardHeader';
+import { CardHeaderDrawer } from '../../../CardHeader';
 
 export const Family: FC = () => {
   return (

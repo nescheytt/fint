@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { Card, CardBody, HStack, IconButton, Stack, StackDivider, Text, useDisclosure } from "@chakra-ui/react";
 import { PhoneOutgoing, Mail } from "lucide-react";
-import { Icons } from "../../../icons"
-import ModalNewHolderPayer from "../../../modals/modal-new-holder-payer";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import ModalNewHolderPayer from "../../../modal-new-holder-payer";
+import { CardHeaderDrawer } from "../../../CardHeader";
 import { mockListHolderPayers } from "../../../../mock/pages/bills/mock-holder-payers";
+import { WhatsappIcon } from "@/components/WhatsappIcon";
 
 export const HolderPayer = () => {
   const { isOpen, onClose, onOpen } = useDisclosure()
@@ -25,17 +25,17 @@ export const HolderPayer = () => {
                     <Text color="grayIron.500">{holder.relationship}</Text>
                   </Stack>
                   <HStack >
-                    <IconButton aria-label='Share whatsapp' icon={<Icons.Whatsapp color="grayIron.500" w="20px" h="20px" />} w="40px" minW={0} h="40px" variant="ghost" />
+                    <IconButton aria-label='Share whatsapp' icon={<WhatsappIcon color="grayIron.500" w="20px" h="20px" />} w="40px" minW={0} h="40px" variant="ghost" />
                     <IconButton aria-label='Share phone' icon={<PhoneOutgoing size={20} />} color="grayIron.500" w="40px" minW={0} h="40px" variant="ghost" />
                     <IconButton aria-label='Share email' icon={<Mail size={20} />} color="grayIron.500" w="40px" minW={0} h="40px" variant="ghost" />
-                  </HStack>  
+                  </HStack>
                 </HStack>
               )
             })}
           </Stack>
         </CardBody>
       </Card>
-      
+
       <ModalNewHolderPayer isOpen={isOpen} onClose={onClose} finalRef={finalRef} />
     </>
   )

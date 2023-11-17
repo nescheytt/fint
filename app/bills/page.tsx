@@ -1,18 +1,19 @@
-import { FC } from 'react';
+"use client"
+
 import { Flex, Stack, useMediaQuery } from '@chakra-ui/react';
 import Layout from '../../components/Layout';
 import Title from '../../components/Title';
 import Filters from '../../components/Filters';
-import { List } from '../../components/pages/students/list';
+import { List } from '../../components/pages/bills/list';
 import Paginator from '../../components/Paginator';
 
-const PageStudents: FC = () => {
+export default function Page() {
   const [isDesktop] = useMediaQuery("(min-width: 768px)", { ssr: true, fallback: true });
-  
+
   return (
     <Layout>
       <Stack spacing={6}>
-        <Title title="Estudiantes" />
+        <Title title="Facturas" />
         <Filters />
         <List />
       </Stack>
@@ -22,6 +23,4 @@ const PageStudents: FC = () => {
       </Flex>
     </Layout>
   )
-};
-
-export default PageStudents;
+}

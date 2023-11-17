@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react";
 import { Info, Pencil } from "lucide-react";
 import { MockDataTypes } from "../../../../types/mock-data-types";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import { CardHeaderDrawer } from "../../../CardHeader";
 import { setColorSchemeBadge } from "../../../../utilities/pages/bills/setColorSchemeBadge";
 import { mockDetail, mockDetailBonus, mockDetailSubTotal, mockDetailTotal } from "../../../../mock/pages/bills/mock-details";
 
@@ -32,7 +32,7 @@ interface Props {
 export const PaymentDetail: FC<Props> = ({ member }) => {
   return (
     <Card border="1px solid" borderColor="grayIron.200" borderRadius="xl" bg="white" boxShadow="xs" overflow="hidden">
-      <CardHeaderDrawer title="Plan de cuota" icon={{ name: 'FileText' }}/>
+      <CardHeaderDrawer title="Plan de cuota" icon={{ name: 'FileText' }} />
 
       <CardBody>
         <Stack divider={<StackDivider borderColor="grayIron.100" />} spacing={3.5}>
@@ -92,7 +92,7 @@ export const PaymentDetail: FC<Props> = ({ member }) => {
                           )
                         })}
                       </Stack>
-                      
+
                       <Stack spacing={4}>
                         {mockDetailBonus.map((item, index) => {
                           return (
@@ -103,7 +103,7 @@ export const PaymentDetail: FC<Props> = ({ member }) => {
                           )
                         })}
                       </Stack>
-                      
+
                       <Stack spacing={4}>
                         {mockDetailSubTotal.map((item, index) => {
                           const subtotal = item.item === "Subtotal"
@@ -117,7 +117,7 @@ export const PaymentDetail: FC<Props> = ({ member }) => {
                           )
                         })}
                       </Stack>
-                      
+
                       <Stack>
                         {mockDetailTotal.map((item, index) => {
                           return (

@@ -2,7 +2,7 @@ import NextLink from 'next/link'
 import { Box, Card, CardBody, HStack, Link, Stack, StackDivider, Text } from "@chakra-ui/react";
 import BadgeTheme from "../../../Badge";
 import { MockDataTypes } from "../../../../types/mock-data-types";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import { CardHeaderDrawer } from "../../../CardHeader";
 
 interface Args {
   member: MockDataTypes

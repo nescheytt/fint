@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { Box, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, Heading, IconButton, useDisclosure, useMediaQuery } from '@chakra-ui/react';
 import { Menu } from 'lucide-react';

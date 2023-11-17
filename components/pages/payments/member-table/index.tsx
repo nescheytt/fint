@@ -1,3 +1,5 @@
+"use client"
+
 import { Badge, Table, TableProps, Tbody, Td, Text, Th, Thead, Tr, useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react'
 import { DrawerStudents } from '../drawer'

@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { Stack, useDisclosure } from '@chakra-ui/react';
 import ModalNewReminder from './modal';

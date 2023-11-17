@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Button, Card, CardBody, Center, HStack, Stack, StackDivider, Text } from "@chakra-ui/react";
 import { Info, Pencil } from "lucide-react";
 import { mockDetail, mockDetailBonus, mockDetailSubTotal, mockDetailTotal } from '../../../../../mock/pages/settings/mock-installments';
-import { CardHeaderDrawer } from "../../../../drawer/CardHeader";
+import { CardHeaderDrawer } from "../../../../CardHeader";
 
 const PlanConcepts: FC = () => {
   return (
@@ -27,7 +27,7 @@ const PlanConcepts: FC = () => {
                   )
                 })}
               </Stack>
-              
+
               <Stack spacing={4}>
                 {mockDetailBonus.map((item, index) => {
                   return (
@@ -38,7 +38,7 @@ const PlanConcepts: FC = () => {
                   )
                 })}
               </Stack>
-              
+
               <Stack spacing={4}>
                 {mockDetailSubTotal.map((item, index) => {
                   const subtotal = item.item === "Subtotal"
@@ -52,7 +52,7 @@ const PlanConcepts: FC = () => {
                   )
                 })}
               </Stack>
-              
+
               <Stack>
                 {mockDetailTotal.map((item, index) => {
                   return (
@@ -64,7 +64,7 @@ const PlanConcepts: FC = () => {
                 })}
               </Stack>
             </Stack>
-            
+
             <Button leftIcon={<Pencil size={20} />} colorScheme="grayIron">
               Editar conceptos del estudiante
             </Button>

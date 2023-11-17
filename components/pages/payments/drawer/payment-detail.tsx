@@ -1,7 +1,7 @@
 import { Badge, Box, Card, CardBody, CardFooter, HStack, Link, Stack, StackDivider, Text } from "@chakra-ui/react";
 import NextLink from 'next/link'
 import { MockDataTypes } from "../../../../types/mock-data-types";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import { CardHeaderDrawer } from "../../../CardHeader";
 import { setColorSchemeBadge } from "../../../../utilities/pages/payments/setColorSchemeBadge";
 
 interface Args {

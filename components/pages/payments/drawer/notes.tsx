@@ -1,8 +1,8 @@
 import { FC, useRef } from "react";
 import { Card, CardBody, Stack, Text, useDisclosure } from "@chakra-ui/react";
 import { mockListNotes } from "../../../../mock/pages/payments/mock-notes";
-import { ModalNewNote } from "../../../modals/modal-new-note";
-import { CardHeaderDrawer } from "../../../drawer/CardHeader";
+import { ModalNewNote } from "../../../modal-new-note";
+import { CardHeaderDrawer } from "../../../CardHeader";
 
 export const Notes: FC = () => {
   const { isOpen, onClose, onOpen } = useDisclosure()

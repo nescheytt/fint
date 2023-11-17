@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   Accordion,
   AccordionButton,
@@ -11,7 +10,6 @@ import {
   Flex,
   HStack,
   Icon,
-  Link,
   Square,
   Stack,
   Text,

@@ -1,3 +1,5 @@
+"use client"
+
 import { FC, useState } from 'react';
 import 'react-quill/dist/quill.snow.css';
 
@@ -13,7 +15,7 @@ const modules = {
   toolbar: [
     [{ 'header': [false, 1, 2, 3] }],
     ['bold', 'italic', 'underline', { 'color': [] }, { 'background': [] }],
-    [{ 'align': [] }, { 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1'}, { 'indent': '+1' }, 'blockquote'],
+    [{ 'align': [] }, { 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }, 'blockquote'],
     ['strike'],
     ['clean'],
   ]

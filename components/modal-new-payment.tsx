@@ -21,10 +21,10 @@ import {
 } from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
 import { DragEvent, RefObject, useRef, useState } from "react";
-import { Icons } from '../icons'
 import { UploadCloud } from "lucide-react";
-import SelectTheme from "../ui/Select";
-import InputTheme from "../ui/Input";
+import SelectTheme from "./ui/Select";
+import InputTheme from "./ui/Input";
+import { WhatsappIcon } from "./WhatsappIcon";
 
 interface Args {
   isOpen: boolean
@@ -33,10 +33,10 @@ interface Args {
 }
 
 const handlerSubmit = ({ values, actions }: any) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2))
-      actions.setSubmitting(false)
-    }, 1000)
+  setTimeout(() => {
+    alert(JSON.stringify(values, null, 2))
+    actions.setSubmitting(false)
+  }, 1000)
 }
 
 const optionsBills = [
@@ -160,7 +160,7 @@ export const ModalNewPayment = ({ isOpen, onClose, finalRef }: Args) => {
                       <FormControl>
                         <FormLabel>WhatsApp</FormLabel>
                         <InputGroup>
-                          <InputLeftElement pointerEvents='none' children={<Icons.Whatsapp w="16px" h="16px" color='grayIron.500' />} />
+                          <InputLeftElement pointerEvents='none' children={<WhatsappIcon w="16px" h="16px" color='grayIron.500' />} />
                           <InputTheme {...field} type="tel" placeholder="Ingresá un número de WhatsApp" pl={10} />
                         </InputGroup>
                       </FormControl>
