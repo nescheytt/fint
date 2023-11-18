@@ -60,9 +60,8 @@ export const MemberTable = (props: TableProps) => {
             return (
               <Tr key={member.id} _hover={{ bg: "grayIron.50" }}>
                 <Td
-                  w="8%"
                   py={0}
-                  px={5}
+                  px={{ base: 2, md: 5 }}
                   cursor="pointer"
                   onClick={() => handleOnClick(member)}
                 >
@@ -71,9 +70,9 @@ export const MemberTable = (props: TableProps) => {
                   </Text>
                 </Td>
                 <Td
-                  w="50%"
+                  w="36%"
                   py={0}
-                  px={5}
+                  px={{ base: 2, md: 5 }}
                   cursor="pointer"
                   onClick={() => handleOnClick(member)}
                 >
@@ -86,18 +85,16 @@ export const MemberTable = (props: TableProps) => {
                   </Text>
                 </Td>
                 <Td
-                  w="8%"
                   py={0}
-                  px={5}
+                  px={{ base: 2, md: 5 }}
                   cursor="pointer"
                   onClick={() => handleOnClick(member)}
                 >
                   <Text color="gray.600">{member.bill.code}</Text>
                 </Td>
                 <Td
-                  w="8%"
                   py={0}
-                  px={5}
+                  px={{ base: 2, md: 5 }}
                   cursor="pointer"
                   onClick={() => handleOnClick(member)}
                 >
@@ -106,7 +103,6 @@ export const MemberTable = (props: TableProps) => {
                   </Text>
                 </Td>
                 <Td
-                  w="8%"
                   p="10px 10px 10px 20px"
                   cursor="pointer"
                   onClick={() => handleOnClick(member)}
@@ -120,15 +116,14 @@ export const MemberTable = (props: TableProps) => {
                   </Badge>
                 </Td>
                 <Td
-                  w="8%"
                   py={0}
-                  px={5}
+                  px={{ base: 2, md: 5 }}
                   cursor="pointer"
                   onClick={() => handleOnClick(member)}
                 >
                   <Text color="gray.600">${member.bill.amount}</Text>
                 </Td>
-                <Td w="4%" p={0}>
+                <Td p={0}>
                   <MenuActionsButton fontSize="sm" />
                 </Td>
               </Tr>
