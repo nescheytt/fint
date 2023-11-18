@@ -59,18 +59,21 @@ const linksTopSidebar = [
 
 const linksBottomSidebar = [
   {
-    href: "/",
+    href: "",
     label: "Soporte",
+    disabled: true,
     icon: (isDesktop: boolean) => <LifeBuoy size={isDesktop ? 18 : 24} />,
   },
   {
     href: "/settings",
     label: "Ajustes",
+    disabled: false,
     icon: (isDesktop: boolean) => <Settings size={isDesktop ? 18 : 24} />,
   },
   {
-    href: "/",
+    href: "",
     label: "Salir",
+    disabled: true,
     icon: (isDesktop: boolean) => <LogOut size={isDesktop ? 18 : 24} />,
   },
 ]
@@ -138,8 +141,8 @@ const Sidebar: FC = () => {
         </Stack>
 
         <Stack spacing={1}>
-          {linksBottomSidebar.map((item, index) => {
-            const { href } = item
+          {linksBottomSidebar.map((link, index) => {
+            const { href } = link
             const selected = pathname === href
 
             return (
@@ -154,20 +157,24 @@ const Sidebar: FC = () => {
                   flexDirection={isDesktop ? "column" : "row"}
                   alignItems="center"
                   color={selected ? "fint.600" : "grayIron.600"}
+                  aria-disabled={link.disabled}
                   _hover={{ color: "fint.600" }}
+                  _disabled={{ color: "grayIron.400" }}
                 >
-                  {item.icon(isDesktop)}
+                  {link.icon(isDesktop)}
                   <LinkOverlay
                     as={NextLink}
-                    href={item.href}
+                    href={link.href}
                     fontSize={isDesktop ? "xs" : "sm"}
                     fontWeight={600}
                     lineHeight={isDesktop ? "18px" : "20px"}
                     color={selected ? "fint.600" : "grayIron.600"}
                     ml={isDesktop ? 0 : 2}
+                    aria-disabled={link.disabled}
                     _hover={{ color: "fint.600" }}
+                    _disabled={{ color: "grayIron.400" }}
                   >
-                    {item.label}
+                    {link.label}
                   </LinkOverlay>
                 </Flex>
               </LinkBox>

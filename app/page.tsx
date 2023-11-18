@@ -3,9 +3,7 @@
 import NextLink from "next/link"
 import {
   Box,
-  Button,
   Container,
-  HStack,
   Heading,
   Icon,
   Link,
@@ -30,13 +28,13 @@ const Arrow = createIcon({
 
 export default function Page() {
   return (
-    <Container as={'main'} minHeight={"100vh"} maxW={"3xl"}>
+    <Container as={"main"} minHeight={"100vh"} maxW={"3xl"}>
       <Stack
         as={Box}
         minHeight={"100vh"}
         textAlign={"center"}
-        alignContent={'center'}
-        justifyContent={'center'}
+        alignContent={"center"}
+        justifyContent={"center"}
         spacing={{ base: 8, md: 14 }}
         py={{ base: 20, md: 36 }}
       >
@@ -45,7 +43,8 @@ export default function Page() {
           fontSize={{ base: "2xl", sm: "4xl", md: "5xl" }}
           lineHeight={"110%"}
         >
-          La única solución de cobros<br />
+          La única solución de cobros
+          <br />
           <Text as={"span"} color={"fint.600"}>
             que tu colegio necesita
           </Text>
