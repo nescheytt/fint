@@ -1,6 +1,6 @@
 type ListHolderPayers = {
-  name: string;
-  relationship: string;
+  name: string
+  relationship: string
 }
 
 export const mockListHolderPayers: Array<ListHolderPayers> = [

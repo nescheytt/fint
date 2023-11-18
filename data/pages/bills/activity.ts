@@ -1,6 +1,6 @@
 type Acitivy = {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 
 export const mockActivity: Array<Acitivy> = [

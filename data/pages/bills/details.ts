@@ -1,6 +1,6 @@
 type Detail = {
-  item: string;
-  value: string;
+  item: string
+  value: string
 }
 
 export const mockDetail: Array<Detail> = [

@@ -1,4 +1,3 @@
-
 type ListBill = {
   type: string
   date: string

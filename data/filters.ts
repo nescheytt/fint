@@ -1,6 +1,6 @@
 type Options = {
-  value: string;
-  label: string;
+  value: string
+  label: string
 }
 
 export const options: Array<Options> = [

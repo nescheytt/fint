@@ -1,6 +1,6 @@
 type ListNotes = {
-  text: string;
-  date: string;
+  text: string
+  date: string
 }
 
 export const mockListNotes: Array<ListNotes> = [

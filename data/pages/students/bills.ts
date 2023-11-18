@@ -3,7 +3,6 @@ type ListBills = {
   value: string
   status: string
   date: string
-
 }
 
 export const mockListBills: Array<ListBills> = [
