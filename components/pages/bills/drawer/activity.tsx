@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { CardHeaderDrawer } from "../../../CardHeader"
-import { mockActivity } from "../../../../mock/pages/bills/mock-activity"
+import { mockActivity } from "@/data/pages/bills/activity"
 
 export const Activity: FC = () => {
   return (

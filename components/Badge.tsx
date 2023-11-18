@@ -1,10 +1,10 @@
 import { FC } from "react"
 import { Badge } from "@chakra-ui/react"
+import type { MockDataTypes } from "@/types/data"
 import {
   setBgColorStatus,
   setColorTextStatus,
 } from "../utilities/setColorSchemeBadge"
-import { MockDataTypes } from "../types/mock-data-types"
 
 interface Props {
   size: string

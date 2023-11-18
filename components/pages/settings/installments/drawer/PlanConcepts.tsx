@@ -15,7 +15,7 @@ import {
   mockDetailBonus,
   mockDetailSubTotal,
   mockDetailTotal,
-} from "../../../../../mock/pages/settings/mock-installments"
+} from "@/data/pages/settings/installments"
 import { CardHeaderDrawer } from "../../../../CardHeader"
 
 const PlanConcepts: FC = () => {

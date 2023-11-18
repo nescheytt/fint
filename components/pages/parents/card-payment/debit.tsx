@@ -12,7 +12,7 @@ import {
 import { FiLock } from "react-icons/fi"
 import AlertDebit from "./alert-debit"
 import Details from "./details"
-import { data } from "./details/data"
+import { data } from "../../../../data/pages/parents/data"
 
 const CardPayment = () => {
   return (

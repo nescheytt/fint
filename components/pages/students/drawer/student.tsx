@@ -1,3 +1,4 @@
+import type { MockDataTypes } from "@/types/data"
 import NextLink from "next/link"
 import {
   Box,
@@ -10,7 +11,6 @@ import {
   Text,
 } from "@chakra-ui/react"
 import BadgeTheme from "../../../Badge"
-import { MockDataTypes } from "../../../../types/mock-data-types"
 import { CardHeaderDrawer } from "../../../CardHeader"
 
 interface Args {

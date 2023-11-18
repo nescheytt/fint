@@ -10,7 +10,7 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react"
-import { mockPayments } from "../../../../mock/pages/bills/mock-payments"
+import { mockPayments } from "@/data/pages/bills/payments"
 import MenuActionsButton from "../../../MenuButton"
 import { ModalNewPayment } from "../../../modal-new-payment"
 import { CardHeaderDrawer } from "../../../CardHeader"

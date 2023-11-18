@@ -1,5 +1,5 @@
 import { UseDisclosureProps } from "@chakra-ui/react"
-import { mockListBillDueReminders } from "../../../../mock/pages/settings/mock-reminders"
+import { mockListBillDueReminders } from "@/data/pages/settings/reminders"
 import TitleReminders from "./TitleReminders"
 import ContentReminders from "./ContentReminders"
 

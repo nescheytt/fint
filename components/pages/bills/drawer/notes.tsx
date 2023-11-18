@@ -2,7 +2,7 @@ import { useRef } from "react"
 import { Card, CardBody, Stack, Text, useDisclosure } from "@chakra-ui/react"
 import { ModalNewNote } from "../../../modal-new-note"
 import { CardHeaderDrawer } from "../../../CardHeader"
-import { mockListNotes } from "../../../../mock/pages/bills/mock-notes"
+import { mockListNotes } from "@/data/pages/bills/notes"
 
 export const Notes = () => {
   const { isOpen, onClose, onOpen } = useDisclosure()

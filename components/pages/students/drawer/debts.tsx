@@ -1,16 +1,8 @@
 import { FC } from "react"
 import NextLink from "next/link"
-import {
-  Box,
-  Card,
-  Center,
-  HStack,
-  LinkBox,
-  LinkOverlay,
-  Text,
-} from "@chakra-ui/react"
 import { ChevronRight } from "lucide-react"
-import { mockListDebts } from "../../../../mock/pages/students/mock-debts"
+import { Box, Card, Center, HStack, LinkBox, LinkOverlay, Text } from "@chakra-ui/react"
+import { mockListDebts } from "@/data/pages/students/debts"
 
 interface DebtProps {
   debt: {

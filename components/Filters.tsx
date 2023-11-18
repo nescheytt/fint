@@ -17,7 +17,7 @@ import {
   optionsLevels,
   optionsPayments,
   optionsStates,
-} from "../mock/mock-filters"
+} from "@/data/filters"
 import SelectControlTheme from "./ui/SelectControl"
 import SelectTheme from "./ui/Select"
 import InputTheme from "./ui/Input"

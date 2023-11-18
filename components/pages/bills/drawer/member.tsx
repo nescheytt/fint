@@ -1,4 +1,6 @@
+import type { MockDataTypes } from "@/types/data"
 import NextLink from "next/link"
+import { ChevronRight } from "lucide-react"
 import {
   Avatar,
   Card,
@@ -9,8 +11,6 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react"
-import { ChevronRight } from "lucide-react"
-import { MockDataTypes } from "../../../../types/mock-data-types"
 
 interface Args {
   member: MockDataTypes

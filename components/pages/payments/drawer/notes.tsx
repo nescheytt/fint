@@ -1,6 +1,6 @@
 import { FC, useRef } from "react"
 import { Card, CardBody, Stack, Text, useDisclosure } from "@chakra-ui/react"
-import { mockListNotes } from "../../../../mock/pages/payments/mock-notes"
+import { mockListNotes } from "@/data/pages/payments/notes"
 import { ModalNewNote } from "../../../modal-new-note"
 import { CardHeaderDrawer } from "../../../CardHeader"
 

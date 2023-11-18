@@ -1,3 +1,5 @@
+import type { MockDataTypes } from "@/types/data"
+import { useState } from "react"
 import {
   Badge,
   Table,
@@ -11,10 +13,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/react"
 import { DrawerStudents } from "../drawer"
-import { useState } from "react"
 import MenuActionsButton from "../../../MenuButton"
-import { mockData } from "../../../../mock/mock-data"
-import { MockDataTypes } from "../../../../types/mock-data-types"
+import { mockData } from "@/data/data"
 import { setColorSchemeBadge } from "../../../../utilities/pages/students/setColorSchemeBadge"
 
 const basicThStyles = {

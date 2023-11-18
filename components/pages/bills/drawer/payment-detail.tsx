@@ -1,5 +1,7 @@
-import { FC } from "react"
+import type { MockDataTypes } from "@/types/data"
 import NextLink from "next/link"
+import { FC } from "react"
+import { Info, Pencil } from "lucide-react"
 import {
   Accordion,
   AccordionButton,
@@ -19,8 +21,6 @@ import {
   StackDivider,
   Text,
 } from "@chakra-ui/react"
-import { Info, Pencil } from "lucide-react"
-import { MockDataTypes } from "../../../../types/mock-data-types"
 import { CardHeaderDrawer } from "../../../CardHeader"
 import { setColorSchemeBadge } from "../../../../utilities/pages/bills/setColorSchemeBadge"
 import {
@@ -28,7 +28,7 @@ import {
   mockDetailBonus,
   mockDetailSubTotal,
   mockDetailTotal,
-} from "../../../../mock/pages/bills/mock-details"
+} from "@/data/pages/bills/details"
 
 interface Props {
   member: MockDataTypes

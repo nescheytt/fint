@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { Mail, PhoneOutgoing } from "lucide-react"
-import { mockListHolderPayers } from "../../../../mock/pages/payments/mock-holder-payers"
+import { mockListHolderPayers } from "@/data/pages/payments/holder-payers"
 import { CardHeaderDrawer } from "../../../CardHeader"
 import { WhatsappIcon } from "@/components/WhatsappIcon"
 

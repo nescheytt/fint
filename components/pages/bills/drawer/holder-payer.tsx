@@ -12,7 +12,7 @@ import {
 import { PhoneOutgoing, Mail } from "lucide-react"
 import ModalNewHolderPayer from "../../../modal-new-holder-payer"
 import { CardHeaderDrawer } from "../../../CardHeader"
-import { mockListHolderPayers } from "../../../../mock/pages/bills/mock-holder-payers"
+import { mockListHolderPayers } from "@/data/pages/bills/holder-payers"
 import { WhatsappIcon } from "@/components/WhatsappIcon"
 
 export const HolderPayer = () => {

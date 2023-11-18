@@ -1,5 +1,7 @@
-import { FC } from "react"
+import type { MockDataTypes } from "@/types/data"
 import NextLink from "next/link"
+import { FC } from "react"
+import { ChevronRight, FileText } from "lucide-react"
 import {
   Badge,
   Card,
@@ -12,9 +14,7 @@ import {
   StackDivider,
   Text,
 } from "@chakra-ui/react"
-import { ChevronRight, FileText } from "lucide-react"
-import { mockListBills } from "../../../../mock/pages/students/mock-bills"
-import { MockDataTypes } from "../../../../types/mock-data-types"
+import { mockListBills } from "@/data/pages/students/bills"
 import BadgeTheme from "../../../Badge"
 import { CardHeaderDrawer } from "../../../CardHeader"
 

@@ -19,7 +19,7 @@ import {
   mockDetailBonus,
   mockDetailSubTotal,
   mockDetailTotal,
-} from "../../../../mock/pages/students/mock-paid-plan"
+} from "@/data/pages/students/paid-plan"
 import { CardHeaderDrawer } from "../../../CardHeader"
 
 export function PaidPlan() {

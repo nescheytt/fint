@@ -1,5 +1,6 @@
 import { FC } from "react"
 import NextLink from "next/link"
+import { ChevronRight } from "lucide-react"
 import {
   Card,
   CardBody,
@@ -11,8 +12,7 @@ import {
   StackDivider,
   Text,
 } from "@chakra-ui/react"
-import { ChevronRight } from "lucide-react"
-import { mockListFamily } from "../../../../mock/pages/students/mock-family"
+import { mockListFamily } from "@/data/pages/students/family"
 import { CardHeaderDrawer } from "../../../CardHeader"
 
 export const Family: FC = () => {

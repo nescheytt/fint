@@ -1,8 +1,8 @@
 "use client"
 
+import type { MockDataTypes } from "@/types/settings"
 import React from "react"
 import { Stack, useDisclosure } from "@chakra-ui/react"
-import { MockDataTypes } from "../../../../types/mock-settings-types"
 import DrawerSettings from "./drawer"
 import ModalNewPlan from "./modal"
 import SearchBar from "./SearchBar"

@@ -1,3 +1,5 @@
+import type { MockDataTypes } from "@/types/data"
+import NextLink from "next/link"
 import {
   Badge,
   Box,
@@ -10,8 +12,6 @@ import {
   StackDivider,
   Text,
 } from "@chakra-ui/react"
-import NextLink from "next/link"
-import { MockDataTypes } from "../../../../types/mock-data-types"
 import { CardHeaderDrawer } from "../../../CardHeader"
 import { setColorSchemeBadge } from "../../../../utilities/pages/payments/setColorSchemeBadge"
 

@@ -1,3 +1,4 @@
+import type { MockDataTypes } from "@/types/data"
 import {
   Box,
   Drawer,
@@ -18,9 +19,6 @@ import { PaymentDetail } from "./payment-detail"
 import { PaymentMethods } from "./payment-methods"
 import { Bill } from "./bill"
 import { Notes } from "./notes"
-
-// types
-import { MockDataTypes } from "../../../../types/mock-data-types"
 
 interface DrawerStudentsProps {
   isOpen: boolean

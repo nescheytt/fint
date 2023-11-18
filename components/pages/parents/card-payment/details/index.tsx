@@ -16,7 +16,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 import { FiFileText, FiDownload } from "react-icons/fi"
-import { NavData } from "./data"
+import { NavData } from "@/data/pages/parents/data"
 
 type ItemProps = {
   children: React.ReactNode

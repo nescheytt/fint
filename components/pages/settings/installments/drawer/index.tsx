@@ -1,3 +1,4 @@
+import type { MockDataTypes } from "@/types/settings"
 import React from "react"
 import {
   Box,
@@ -12,7 +13,6 @@ import {
   Text,
   UseModalProps,
 } from "@chakra-ui/react"
-import { MockDataTypes } from "../../../../../types/mock-settings-types"
 import MenuActionsButton from "../../../../MenuButton"
 import PlanDetails from "./PlanDetails"
 import PlanConcepts from "./PlanConcepts"

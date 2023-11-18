@@ -1,3 +1,4 @@
+import type { MockDataTypes } from "@/types/data"
 import {
   Box,
   Drawer,
@@ -10,7 +11,6 @@ import {
   Text,
 } from "@chakra-ui/react"
 import MenuActionsButton from "../../../MenuButton"
-import { MockDataTypes } from "../../../../types/mock-data-types"
 import { Bill } from "./bill"
 import { Debts } from "./debts"
 import { Family } from "./family"

@@ -10,7 +10,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react"
 import { Mail, PhoneOutgoing } from "lucide-react"
-import { mockListHolderPayers } from "../../../../mock/pages/students/mock-holder-payers"
+import { mockListHolderPayers } from "@/data/pages/students/holder-payers"
 import ModalNewHolderPayer from "../../../modal-new-holder-payer"
 import { CardHeaderDrawer } from "../../../CardHeader"
 import { WhatsappIcon } from "@/components/WhatsappIcon"

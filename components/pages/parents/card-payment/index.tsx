@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react"
 import { FiLock } from "react-icons/fi"
 import Details from "./details"
-import { data } from "./details/data"
+import { data } from "../../../../data/pages/parents/data"
 
 const CardPayment = () => {
   return (

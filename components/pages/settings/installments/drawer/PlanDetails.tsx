@@ -1,3 +1,4 @@
+import type { MockDataTypes } from "@/types/settings"
 import * as React from "react"
 import NextLink from "next/link"
 import {
@@ -9,7 +10,6 @@ import {
   StackDivider,
   Text,
 } from "@chakra-ui/react"
-import { MockDataTypes } from "../../../../../types/mock-settings-types"
 import { CardHeaderDrawer } from "../../../../CardHeader"
 
 interface Props {

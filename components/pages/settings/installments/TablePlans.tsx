@@ -1,5 +1,6 @@
 "use client"
 
+import type { MockDataTypes } from "@/types/settings"
 import {
   Badge,
   Box,
@@ -11,8 +12,7 @@ import {
   Tbody,
   Td,
 } from "@chakra-ui/react"
-import { mockData } from "../../../../mock/pages/settings/mock-settings"
-import { MockDataTypes } from "../../../../types/mock-settings-types"
+import { mockData } from "@/data/pages/settings/settings"
 import { setColorSchemeBadge } from "../../../../utilities/pages/settings/setColorSchemeBadge"
 import MenuActionsButton from "../../../MenuButton"
 
@@ -64,7 +64,7 @@ export default function TablePlans({ onClick }: TablePlansProps) {
                   py={0}
                   px={5}
                   cursor="pointer"
-                  // onClick={() => onClick(plan)}
+                // onClick={() => onClick(plan)}
                 >
                   <Text
                     fontWeight={500}
@@ -79,7 +79,7 @@ export default function TablePlans({ onClick }: TablePlansProps) {
                   py={0}
                   px={5}
                   cursor="pointer"
-                  // onClick={() => onClick(plan)}
+                // onClick={() => onClick(plan)}
                 >
                   <Text color="gray.600" textTransform="capitalize">
                     {plan.quantityStudents}
@@ -89,7 +89,7 @@ export default function TablePlans({ onClick }: TablePlansProps) {
                   w="15%"
                   p="10px 10px 10px 20px"
                   cursor="pointer"
-                  // onClick={() => onClick(plan)}
+                // onClick={() => onClick(plan)}
                 >
                   <Badge
                     size="sm"
@@ -104,7 +104,7 @@ export default function TablePlans({ onClick }: TablePlansProps) {
                   py={0}
                   px={5}
                   cursor="pointer"
-                  // onClick={() => onClick(plan)}
+                // onClick={() => onClick(plan)}
                 >
                   <Text color="gray.600" textTransform="capitalize">
                     ${plan.amount}
